@@ -1,0 +1,153 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+    Add Patients
+{% endblock contentTitle %}
+
+{% block content %}
+
+    <form action="" method="post">
+    {% csrf_token %}
+        
+        <div class="container">
+            <div class="patient-form ">
+                <div class="row">
+                    <div class="form-field col-md-6">
+                        <input type="text" id="name" class="input-text" type="text" name="name" placeholder="Name">
+                    </div>
+
+                    <div class="form-field col-md-6">
+                        <input type="text" id="phone_num" class="input-text" type="text" name="phone_num" placeholder="Phone no.">
+                    </div>
+
+                    <div class="form-field col-md-6">
+                        <input type="text" id="patient_relative_name" class="input-text" type="text" name="patient_relative_name" placeholder="Relative's name">
+                    </div>
+
+                    <div class="form-field col-md-6">
+                        <input type="text" id="patient_relative_contact" class="input-text" type="text" name="patient_relative_contact" placeholder="Relative's contact">
+                    </div>
+
+                    <div class="form-field col-md-12">
+                        <input type="text" id="patient_relative_contact" class="input-text" type="text" name="address" placeholder="Address">
+                    </div>
+
+                    <div class="form-field col-md-6" style="padding-bottom: 4px;">
+                        <input type="text" id="prior_ailments" class="form-control input-text mb-0 p-0 " style="outline:none" type="text" name="prior_ailments" placeholder="Prior ailments if any, eg: Diabetes, Thyroid">
+                    </div>
+
+                    <div class="form-field col-md-4 offset-md-2 mb-4 mx-auto">
+                    <select name="bed_num" class="btn btn-bed" id="bed_num">
+                    {% for bed in beds %}
+                        <option value={{ bed }}>{{ bed }}</option>
+                    {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="form-field col-md-6">
+                    <input type="date" id="dob" class="input-text" type="date" name="dob">
+                </div>
+
+                <div class="form-field col-md-6">
+                    <select class="input-text"  name="status" id="status">
+                        <option class="bg-danger text-white" value="Critical">Critical</option>
+                        <option class="bg-warning text-white" value="Recovering">Recovering</option>
+                        <option class="bg-success text-white" value="Recovered">Recovered</option>
+                        <option class="bg-secondary text-white" value="Deceased">Deceased</option>
+                    </select>
+                </div>
+
+                <div class="form-field col-md-6">
+                    <select class="input-text"  name="doctor" id="doctor">
+                        {% for doctor in doctors %}
+                            <option class="" value="{{doctor}}">{{doctor}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+
+            </div>
+
+{{doctor}}
+            <!-- symptons field -->
+            <div class="patient-form row d-flex">
+                <div class="symptoms row">
+                <div class="symptoms-label col-12 text-center mt-0">Symptoms</div><br>
+                
+                <!-- <div class="row"> -->
+                    <div class="common-symptoms col-md-4">
+                        <label for="" class="symptom-type">Common</label><br>
+
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" id="fever" value="Fever" class="checkbox">
+                        <label for="fever">Fever</label><br>
+                        </div>
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Dry Cough" id="dry_cough">
+                        <label for="">Dry cough</label><br>
+                        </div>
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Tiredness" id="tiredness">
+                        <label for="">Tiredness</label><br>
+                        </div>
+                    </div>
+                
+                    <div class="less-common-symptoms col-md-4">
+                    <div>
+                        <label for="" class="symptom-type">Less Common</label><br>
+                        
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Aches and pains" id="aches_and_pain">
+                        <label for="">Aches and pains</label><br>
+                        </div>
+        
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Sore Throat" id="sore_throat">
+                        <label for="">Sore throat</label><br>
+                        </div>
+
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" valu="Diarrhoea" id="diarrhoea">
+                        <label for="">Diarrhoea</label><br>
+                        </div>
+
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Loss of taste or smell" id="loss_of_taste_or_smell">
+                        <label for="">Loss of taste or smell</label><br>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="serious-symptoms col-md-4">
+                        <label for="" class="symptom-type">Serious</label><br>
+        
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Difficulty in breathing or shortness of breath" id="difficulty_in_breathing_or_shortness_of_breath">
+                        <label for="">Difficulty in breathing or shortness of breath</label><br>
+                        </div>
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Chest pain or pressure" id="chest_pain_or_pressure">
+                        <label for="">Chest pain or pressure</label><br>
+                        </div>
+                        <div class="symptom">
+                        <input type="checkbox" name="symptoms" value="Loss Of Speech Or Movement" id="loss_of_speech_or_movement">
+                        <label for="">Loss of speech or movement</label><br>
+                        </div>
+                    </div>  
+
+
+                <!-- </div> -->
+            </div>
+            </div>
+            
+        </div>
+
+        </div>
+        </div>
+    </div>
+        <button class="btn col-lg-4 btn-block mx-auto btn-info mb-4" >Add Patient</button>
+    </form>
+{% endblock content %}
