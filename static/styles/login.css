@@ -1,0 +1,88 @@
+body{
+    /* background-color: transparent !important; */
+    /* background-image: linear-gradient(135deg, #a72879, #064497) !important; */
+    /* background: #c3d9ff; */
+    
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    height: 100vh;
+    /* background-image: none !important;
+    background-image: linear-gradient(135deg, #a72879, #064497) !important; */
+}
+
+.heading{
+    width: fit-content;
+    margin: 0 auto 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);    
+    width: fit-content;
+    padding: 40px 30px;
+    
+    background-color: white;
+    border: 1px solid rgba(68, 68, 68, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px black;
+    /* background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 225, 245)); */
+}
+
+.login-form .username, .login-form .password{
+    /* position: relative; */
+    margin: 32px 0;
+}
+
+.row{
+    padding: 0;
+}
+
+.username > div, .password > div{
+    margin: 0;
+    margin-top: 0px;
+    width: fit-content;
+}
+
+.login-form .input-text{
+    /* width: 70%; */
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    font-size: 1em;
+    font-weight: 400;
+    
+    border-width: 0 0 3px 0;
+    border-color: #5543ca;
+    background-color: transparent;
+    transition: border-color 0.2s linear;
+}
+
+.login-form .input-text:focus{
+    outline: none;
+    border-bottom-color: #d100b9;
+}
+
+.fa-user-shield, .fa-key{
+    margin: 0 20px 0 0;
+    font-size: 1.8em;
+    color: rgb(72, 72, 72);
+}
+
+.login-form .submit-btn{
+    width: 150px;
+    padding: 8px 16px;
+    margin: 40px auto 0;
+    
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(38, 136, 228);
+}
+
+.login-form .submit-btn:hover{
+    background-color: rgb(32, 80, 201);
+}

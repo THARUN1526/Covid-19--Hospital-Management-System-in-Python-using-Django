@@ -1,0 +1,235 @@
+body{
+    background: #fffefe;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.vertical-nav{
+    background: #3b82f6 !important;
+    min-width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.page-content{
+    width: calc(100% -17rem);   /*same as vertical nav width*/
+    margin-left: 17rem;
+    transition: all 0.4s;
+}
+
+#sidebar.active{
+    margin-left: -17rem;
+}
+
+#content.active{
+    width: 100%;
+    margin: 0;
+}
+
+.seperator{
+    margin: 3rem 0;
+    border-bottom: 1px dashed #000000;
+}
+
+.nav-link{
+    text-transform: capitalize;
+}
+
+.nav-link:hover{
+    background: #5a01f5ee;
+}
+
+.text-primary{
+    color: #fff !important;
+}
+
+@media (max-width: 768px){
+    #sidebar{
+        margin-left: -17rem;
+    }
+    #sidebar.active{
+        margin-left: 0;
+    }
+    #content{
+        width:100%;
+        margin: 0;
+    }
+    #content.active{
+        margin-left: 17rem;
+        width: calc(100% - 17rem);
+    }
+}
+
+.border-left-info{
+border-left: 0.25rem solid #36b9cc !important;
+}
+
+.border-left-warning{
+border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-success {
+  border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid #e74a3b !important;
+}
+
+.text-gray-300 {
+  color: #54555c !important;
+}
+
+.border-left-primary  {
+  border-left: 0.25rem solid #4e73df !important;
+}
+
+.text-blue {
+    color:  #4e73df !important;
+}
+
+.btn-purple{
+    background: #6d19fc;
+    color: #ffffff;  
+    height: 2rem; 
+    padding-top: 2px;
+}
+
+.btn-bed{
+    background: #6d19fc;
+    color: #ffffff;  
+    height: 2rem; 
+    padding-top: 2px;
+    margin-bottom: 2em;
+}
+
+.bed{
+    padding-bottom: 2em;
+}
+.btn-purple:hover{
+    color: white;
+}
+
+#id_name{
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #4e73df;
+}
+
+#id_bed_num{
+        margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #4e73df;
+}
+
+#id_status{
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #4e73df;
+}
+
+#id_doctor{
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #4e73df;
+}
+
+/* patient.html  */
+.patient-form .form-field{
+    /* position: relative; */
+    margin: 32px 0;
+}
+
+.patient-form .input-text{
+    /* display: block; */
+    width: 100%;
+    /* height: 36px; */
+    border-width: 0 0 2px 0;
+    border-color: #6c19fcc2;
+    font-size: 18px;
+    /* line-height: 26px; */
+    font-weight: 400;
+    transition: border-color 0.2s linear;
+}
+
+.patient-form .input-text:focus{
+    outline: none;
+    border-bottom-color: #d100b9;
+}
+
+.patient-form .label{
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    transition: all 0.4s;
+}
+
+.patient-form .submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg, #a72879, #064497);
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+
+.symptoms-label{
+    margin: 50px 0 0px 0;
+    font-size: 23px;
+    line-height: 1em;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+}
+
+.symptoms{
+    margin: 0px 0;
+}
+
+.symptoms .symptom-type{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #5543ca;
+    cursor: text;
+}
+
+.symptoms .symptom{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.symptoms .symptom > input{
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px;
+}
+
+.symptoms .symptom > label{
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* -------------- */
+/* grid box style */
+.grid-box{
+    border-radius: 1px;
+}

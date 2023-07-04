@@ -1,0 +1,49 @@
+.patient-form .form-field{
+    position: relative;
+    margin: 32px 0;
+}
+
+.patient-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #6c19fcc2;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.patient-form .input-text:focus{
+    outline: none;
+}
+
+.patient-form .label{
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    transition: all 0.4s;
+}
+
+.patient-form .submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg, #a72879, #064497);
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+
+.patient-form .input-text:focus + .label,
+.patient-form .input-text.not-empty + .label{
+    transform: translateY(-24px);
+    font-size: 2px;
+}
