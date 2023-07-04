@@ -1,0 +1,11 @@
+The project focuses on providing a clean and aesthetically pleasing user interface that dynamically adapts to changes in a patient's status. It offers a public view with two main pages, one of which is a bed availability grid where the red color indicates occupied beds, while available beds are displayed in a different color. This ensures efficient management of bed allocation. 
+
+Patients can be easily added to the database, along with their relative's contact details to monitor potential COVID-19 exposure. The real-time updates made here reflect on the dashboard, ensuring accurate and up-to-date information for healthcare professionals.
+
+Given the high prevalence of COVID-19, a checklist for COVID symptoms simplifies the screening process. The search functionality allows users to find patients based on name, bed number, doctor assigned, and status, making data retrieval convenient. An update button facilitates easy modification of patient details when necessary.
+
+Beyond patient management, the platform addresses various aspects of hospital operations. Seat, equipment, and oxygen management features ensure efficient resource allocation. Doctor management assists in coordinating healthcare staff. Daily patient routine checkups facilitate monitoring of patient progress. 
+
+To tackle the pandemic effectively, the platform also provides crucial information such as hospital capacity, including ICU availability and ventilator status. Staffing levels are monitored, highlighting any shortages that need attention. Real-time tracking of confirmed and suspected COVID-19 cases entering the hospital allows for immediate response and resource planning.
+
+Overall, the project equips public health officials with comprehensive and actionable data to efficiently coordinate COVID-19 responses. By combining a user-friendly interface with dynamic updates, it empowers healthcare facilities to manage patient care effectively during these challenging times.
